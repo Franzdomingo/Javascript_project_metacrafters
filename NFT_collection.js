@@ -17,12 +17,13 @@ Assessment Requirements
 // Step 1: Define an array to store NFTs
 let nftCollection = [];
 
-function mintNFT(name, eyeColor, shirtType, bling) {
+function mintNFT(name, eyeColor, shirtType, skintone, bling) {
    // NFT metadata object
    const nft = {
        name: name,
        eyeColor: eyeColor,
        shirtType: shirtType,
+       skintone: skintone,
        bling: bling
    };
    
@@ -38,6 +39,7 @@ function listNFTs() {
        console.log(`Name: ${nft.name}`);
        console.log(`Eye Color: ${nft.eyeColor}`);
        console.log(`Shirt Type: ${nft.shirtType}`);
+       console.log(`Skin Tone: ${nft.skintone}`);
        console.log(`Bling: ${nft.bling}`);
        console.log('-------------------------');
    });
@@ -49,9 +51,9 @@ function getTotalSupply() {
    return nftCollection.length;
 }
 // Mint 3 NFTs
-mintNFT("Alice", "Green", "T-shirt", "Silver necklace");
-mintNFT("Bob", "Blue", "Hoodie", "Gold chain");
-mintNFT("Charlie", "Brown", "Sweater", "Diamond ring");
+mintNFT("Alice", "Green", "T-shirt", "Brown", "Silver necklace");
+mintNFT("Bob", "Blue", "Hoodie","Light", "Gold chain");
+mintNFT("Charlie", "Brown", "Sweater", "Dark", "Diamond ring");
 
 // List all NFTs
 listNFTs();

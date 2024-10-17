@@ -1,15 +1,15 @@
-
 // Step 1: Define an array to store NFTs
 let nftCollection = [];
 
-function mintNFT(name, eyeColor, shirtType, skintone, bling) {
+function mintNFT(name, eyeColor, shirtType, skintone, bling, accessories) {
    // NFT metadata object
    const nft = {
        name: name,
        eyeColor: eyeColor,
        shirtType: shirtType,
        skintone: skintone,
-       bling: bling
+       bling: bling,
+       accessories: accessories
    };
    
    // Add NFT to the collection
@@ -26,6 +26,7 @@ function listNFTs() {
        console.log(`Shirt Type: ${nft.shirtType}`);
        console.log(`Skin Tone: ${nft.skintone}`);
        console.log(`Bling: ${nft.bling}`);
+       console.log(`Acessories: ${nft.accessories}`);
        console.log('-------------------------');
    });
 }
@@ -36,13 +37,12 @@ function getTotalSupply() {
    return nftCollection.length;
 }
 // Mint 3 NFTs
-mintNFT("Alice", "Green", "T-shirt", "Brown", "Silver necklace");
-mintNFT("Bob", "Blue", "Hoodie","Light", "Gold chain");
-mintNFT("Charlie", "Brown", "Sweater", "Dark", "Diamond ring");
+mintNFT("Franz", "White", "Sando", "Brown", "Ruby necklace", "Magic Wand");
+mintNFT("Kyla", "Blue", "Hoodie","Light", "Gold Bars", "Divine Rapier sword");
+mintNFT("Caila", "Brown", "Sweater", "Dark", "Diamond ring", "Rifle Gun");
 
 // List all NFTs
 listNFTs();
 
 // Get total supply
 getTotalSupply();
-
